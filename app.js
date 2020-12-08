@@ -4,6 +4,7 @@ let buttonOperande = document.getElementsByClassName("operande");
 let buttonPoint = document.getElementById("buttonPoint");
 let buttonEqual = document.getElementById("buttonEqual");
 let buttonReset = document.getElementById("buttonReset");
+let buttonCopy = document.getElementById("copie");
 
 for (let button of buttonNumber){
     button.addEventListener("click", function () {
@@ -32,4 +33,9 @@ buttonPoint.addEventListener("click", function () {
 
 buttonReset.addEventListener("click", function () {
     para.innerHTML = null;
+})
+
+buttonCopy.addEventListener("click", function () {
+    para.innerHTML.select();
+    document.execCommand("copy");
 })
